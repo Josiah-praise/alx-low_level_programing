@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <time.h>
 
-/*
- *main - Entry Point
- *Description: Positive and Negative numbers
- *Result: Always 0 (success)
+/**
+ *main - Entry point
+ *
+ *Description: Print positive and negative numbers
+ *Return: 0 (sucessful)
  */
 int main(void)
 {
