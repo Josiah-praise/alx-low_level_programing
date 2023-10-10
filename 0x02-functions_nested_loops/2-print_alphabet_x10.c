@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- *2-print_alphabet_x10 - print alphabet
+ *print_alphabet_x10 - print alphabet
  *Description: uses the printalphabet function 10x
  *Return: Void (no return value)
  */
+
 void print_alphabet_x10(void)
 {
 	int i = 0;
@@ -11,7 +12,7 @@ void print_alphabet_x10(void)
 
 	for (; i < 10; i++)
 	{
-		for (a = i; a < 26; a++);
+		for (a = i; a < 26; a++)
 		{
 			_putchar('a' + a);
 		}
