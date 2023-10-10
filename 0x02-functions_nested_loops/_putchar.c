@@ -1,11 +1,11 @@
 #include <unistd.h>
 /**
- *__putchar - display putchar
- *Description: display __putchar
+ *_putchar - display putchar
+ *Description: display _putchar
  *Return: 0 (sucessful)
  */
-int __putchar(void)
+int _putchar(void)
 {
-	write(1, "__putchar\n", 10);
+	write(1, "_putchar\n", 9);
 	return (0);
 }
