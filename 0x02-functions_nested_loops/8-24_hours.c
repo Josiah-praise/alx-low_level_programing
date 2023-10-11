@@ -17,12 +17,9 @@ void jack_bauer(void)
 		else
 			max2 = 10;
 		for (lvl2 = 0; lvl2 < max2; lvl2++)
-			for (lvl3 = 0; lvl3 < 7; lvl3++)
+			for (lvl3 = 0; lvl3 < 6; lvl3++)
 			{
-				if (lvl3 == 6)
-					max4 = -1;
-				else
-					max4 = 10;
+				max4 = 10;
 				for (lvl4 = 0; lvl4 < max4; lvl4++)
 				{
 					_putchar('0' + lvl1);
