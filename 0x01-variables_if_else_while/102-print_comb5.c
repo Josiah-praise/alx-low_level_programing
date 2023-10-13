@@ -16,7 +16,7 @@ int main(void)
 		{
 			for (level3 = level1; level3 < 10; level3++)
 			{
-				for (level4 = level2 + 1; level4 < 10; level4++)
+				for (level4 = 0; level4 < 10; level4++)
 				{
 					putchar('0' + level1);
 					putchar('0' + level2);
