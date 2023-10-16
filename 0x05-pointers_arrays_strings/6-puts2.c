@@ -25,6 +25,6 @@ void puts2(char *str)
 	last_index = _strlen(str) - 1;
 
 	for (i = 0; i <= last_index; i += 2)
-		_putchar(str[0]);
+		_putchar(str[i]);
 	_putchar('\n');
 }
