@@ -20,18 +20,16 @@ int _strlen(char *s)
  */
 void puts_half(char *str)
 {
-	int i, last_index, n;
+	int len = _strlen(str);
+	int start;
 
-	last_index = _strlen(str) - 1;
-
-
-	if (_strlen(str) % 2 != 0)
-		n = (_strlen(str) - 1) / 2;
+	if (len % 2 == 0)
+		start = len / 2;
 	else
-		n = _strlen(str) / 2;
+		start = (len - 1) / 2;
 
-
-	for (i = n; i <= last_index; i++)
+	for (int i = start; i < len; i++)
 		_putchar(str[i]);
+
 	_putchar('\n');
 }
