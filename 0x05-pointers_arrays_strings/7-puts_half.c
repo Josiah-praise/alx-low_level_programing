@@ -20,13 +20,13 @@ int _strlen(char *s)
  */
 void puts_half(char *str)
 {
-	int len = _strlen(str);
-	int start, i;
+	int len = _strlen(str), i;
+	int start;
 
 	if (len % 2 == 0)
 		start = len / 2;
 	else
-		start = (len - 1) / 2;
+		start = len - ((len - 1) / 2);
 
 	for (i = start; i < len; i++)
 		_putchar(str[i]);
