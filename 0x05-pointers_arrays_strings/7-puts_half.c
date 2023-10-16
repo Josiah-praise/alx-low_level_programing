@@ -14,11 +14,11 @@ int _strlen(char *s)
 }
 
 /**
- *puts2 - helper function
+ *puts_half - helper function
  *@str: character pointer;
  *Return: no return value
  */
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int i, last_index, n;
 
