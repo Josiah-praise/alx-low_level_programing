@@ -14,9 +14,9 @@ void print_space(int i, int j)
 
 	if ((i * (j + 1)) < 10)
 	{
-		_putcahr('.');
-		_putcahr('.');
-		_putcahr('.');
+		_putchar('.');
+		_putchar('.');
+		_putchar('.');
 	}
 	else if ((i * (j + 1)) > 9 && (i * (j + 1)) < 100)
 	{
@@ -65,7 +65,7 @@ void format(int product)
  */
 void print_times_table(int n)
 {
-	int i, j, product;
+	int i, j;
 	if (!(n > 15) && !(n < 0) )
 
 		for (i = 0;  i <= n; i++)
