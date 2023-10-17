@@ -14,18 +14,18 @@ void print_space(int i, int j)
 
 	if ((i * (j + 1)) < 10)
 	{
-		_putchar('.');
-		_putchar('.');
-		_putchar('.');
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(' ');
 	}
 	else if ((i * (j + 1)) > 9 && (i * (j + 1)) < 100)
 	{
-		_putchar('.');
-		_putchar('.');
+		_putchar(' ');
+		_putchar(' ');
 	}
 	else
 	{
-		_putchar('.');
+		_putchar(' ');
 	}
 }
 
