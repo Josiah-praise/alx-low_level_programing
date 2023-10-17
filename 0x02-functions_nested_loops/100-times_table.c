@@ -2,7 +2,8 @@
 
 void print_space(int, int);
 void format(int);
-/*
+
+/**
  *print_space - helper function
  *Return: No return value
  *@i: integer parameter
@@ -29,7 +30,7 @@ void print_space(int i, int j)
 	}
 }
 
-/*
+/**
  *format - helper function
  *Return: No return value
  *@product: integer parameter
@@ -54,10 +55,10 @@ void format(int product)
 		_putchar('0' + (temp / 10));
 		_putchar('0' + (temp % 10));
 	}
-	
+
 }
 
-/*
+/**
  *print_times_table - utility function
  *Return: no return value
  *@n: integer parameter
@@ -66,7 +67,8 @@ void format(int product)
 void print_times_table(int n)
 {
 	int i, j;
-	if (!(n > 15) && !(n < 0) )
+
+	if (!(n > 15) && !(n < 0))
 
 		for (i = 0;  i <= n; i++)
 		{
