@@ -1,12 +1,14 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
-	char array[10] = "hello", source[5] = "wood";
+char s1[] = "Hello";
+ char s2[] = "World!";
+ printf("%d\n", _strcmp(s1, s2));
+ printf("%d\n", _strcmp(s2, s1));
+ printf("%d\n", _strcmp(s1, s1));
+ return (0);
 
-	_strcat(array, source);
-	
-	printf("%s\n", array);
-	return (0);
 }
