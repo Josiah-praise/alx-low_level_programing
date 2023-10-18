@@ -2,13 +2,35 @@
 #include <stdio.h>
 #include <string.h>
 
+void print_array(int *a, int n)
+{
+ int i;
+ i = 0;
+ while (i < n)
+ {
+ if (i != 0)
+ {
+ printf(", ");
+ }
+ printf("%d", a[i]);
+ i++;
+ }
+ printf("\n");
+}
+
+/**
+* main - check the code
+*
+* Return: Always 0.
+*/
 int main(void)
 {
-char s1[] = "Hello";
- char s2[] = "World!";
- printf("%d\n", _strcmp(s1, s2));
- printf("%d\n", _strcmp(s2, s1));
- printf("%d\n", _strcmp(s1, s1));
+  char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+ char *p;
+ p = leet(s);
+ printf("%s", p);
+ printf("%s", s);
+
  return (0);
 
 }
