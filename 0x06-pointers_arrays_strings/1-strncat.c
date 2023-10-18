@@ -24,7 +24,7 @@ int size(char *str)
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, strlen_dest = size(dest) - 1, strlen_src = size(src) ;
+	int i, strlen_dest = size(dest) - 1, strlen_src = size(src);
 
 	/**
 	 *this makes the assumption that the dest is large enough
