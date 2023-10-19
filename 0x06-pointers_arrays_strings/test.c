@@ -20,7 +20,7 @@ int format(int n)
 
 int main(void)
 {
-    int n = -986;
+    int n = -98;
 
     format(n);
     return (0);

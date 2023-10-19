@@ -1,23 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
-
-void print_array(int *a, int n)
-{
- int i;
- i = 0;
- while (i < n)
- {
- if (i != 0)
- {
- printf(", ");
- }
- printf("%d", a[i]);
- i++;
- }
- printf("\n");
-}
-
 /**
 * main - check the code
 *
@@ -25,14 +7,16 @@ void print_array(int *a, int n)
 */
 int main(void)
 {
-     char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-    char *ptr;
-
-    ptr = leet(str);
-    printf("%s", ptr);
-    printf("%s", str);
-    return (0);
-
+   print_number(98);
+    putchar('\n');
+    print_number(402);
+    putchar('\n');
+    print_number(1024);
+    putchar('\n');
+    print_number(0);
+    putchar('\n');
+    print_number(-98);
+    putchar('\n');
  return (0);
 
 }
