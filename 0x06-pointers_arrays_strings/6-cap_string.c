@@ -21,16 +21,21 @@ int _islower(int c)
 char *cap_string(char *str)
 {
 	int i;
+	char *sep;
 
-	for (i = 0; str[i] != '\0'; i++)
+	sep = ",;.!?\"(){}\n\t ";
+
+	for (; *str != '\0'; str++)
 	{
-		if (_islower(str[i]))
+		for (i = 0; sep[i] != '\0'; i++)
 		{
-			if (str[i - 1] == '\n' || str[i - 1] == ' ' || str[i - 1] ==  '.' || str[i - 1] == '\t')
+			if (_islower(*str))
 			{
-				str[i] = str[i] - 32;
+				if (*(str - 1) == sep[i])
+				{
+					*str = *str - 32;
+				}
 			}
 		}
 	}
-	return (str);
 }
