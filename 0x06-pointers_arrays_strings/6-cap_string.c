@@ -21,7 +21,7 @@ int _islower(int c)
 char *cap_string(char *str)
 {
 	int i;
-	char *sep;
+	char *sep, *temp = str;
 
 	sep = ",;.!?\"(){}\n\t ";
 
@@ -38,4 +38,5 @@ char *cap_string(char *str)
 			}
 		}
 	}
+	return (temp);
 }
