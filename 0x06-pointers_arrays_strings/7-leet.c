@@ -5,20 +5,22 @@
  **/
 char *leet(char *str)
 {
-    char *p = str;
-    while (*str != '\n')
-    {
-        if (*str == 'a' || *str == 'A')
-            *str = '4';
-        else if (*str == 'e' || *str == 'E')
-            *str = '3';
-        else if (*str == 'o' || *str == 'O')
-            *str = '0';
-        else if (*str == 't' || *str == 'T')
-            *str = '7';
-        else if (*str == 'l' || *str == 'L')
-            *str = '1';
+	char *p = str, *letters, *swap;
+	int i;
+
+	swap = "4433007711";
+	letters = "aAeEoOtTlL";
+
+	while (*str != '\0')
+	{
+		i = 0;
+		while (*(letters + i) != '\0')
+		{
+			if (*(letters + i) == *str)
+				*str = *(swap + i);
+			i++;
+		}
 		str++;
-    }
-    return (p);
+	}
+	return (p);
 }
