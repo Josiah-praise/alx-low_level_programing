@@ -5,11 +5,9 @@
   */
 int _strlen(char *s)
 {
-	int size;
-
-	for (size = 0; s[size] != '\0'; size++)
-		continue;
-	return (size);
+	if (*s)
+		return (1 + _strlen(s + 1));
+	return (0);
 }
 
 
