@@ -9,7 +9,7 @@ int _sqrt_recursion(int n);
 */
 int _root_recursion(int n, int root)
 {
-	if (root > 100 || n < 0 || (root * root) > n)
+	if (root > 5000 || n < 0 || (root * root) > n)
 		return (-1);
 	if (n == 0)
 		return (0);
