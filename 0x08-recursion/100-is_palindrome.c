@@ -5,9 +5,7 @@
   */
 int _strlen(char *s)
 {
-	if (*s)
-		return (1 + _strlen(s + 1));
-	return (0);
+	return ((*s) ? 1 + _strlen(s + 1) : 0);
 }
 
 
