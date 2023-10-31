@@ -91,16 +91,21 @@ int *word_len(char **startptr, char *str)
 char **strtow(char *str)
 {
 	int no_words, i = 0, j, *wordlen;
-	
+
 	char **ptr, **start;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
 	no_words = count_word(str);
+
+	if (no_words == 0)
+		return (NULL);
+		
 	ptr = (char **) malloc(sizeof(char *) * ((no_words) + 1));
 	start = startptr(str);
 	wordlen = word_len(start, str);
+
 	if (ptr == NULL)
 		return (NULL);
 	while (i < no_words)
