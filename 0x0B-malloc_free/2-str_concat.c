@@ -41,7 +41,7 @@ char *allocate_memory(char *s1, char *s2)
 	}
 	else if (s1 == NULL && s2 == NULL)
 	{
-		ptr = (char *) malloc(sizeof(char));
+		ptr = (char *) malloc(1 * sizeof(char));
 	}
 	else
 	{
@@ -70,6 +70,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL && s2 == NULL)
 	{
 		*ptr = '\0';
+		return (ptr);
 	}
 	if (s1 != NULL && s2 == NULL)
 	{
