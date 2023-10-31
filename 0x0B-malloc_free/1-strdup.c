@@ -26,15 +26,15 @@ size_t _strlen(char *str)
 char *_strdup(char *str)
 {
 	size_t size = _strlen(str), i;
-	char *ptr = (char *) malloc((size + 1) * sizeof(*ptr));
+	char *ptr;
 
-	if (ptr != NULL)
-	{
-		for (i = 0; i <= size; i++)
-			ptr[i] = str[i];
-		ptr[i] = '\0';
-	}
-	else
+	if (str == NULL)
 		return (NULL);
+	ptr = (char *) malloc((size + 1) * sizeof(*ptr));
+	if (ptr == NULL)
+		return (NULL);
+	for (i = 0; i <= size; i++)
+		ptr[i] = str[i];
+	ptr[i] = '\0';
 	return (ptr);
 }
