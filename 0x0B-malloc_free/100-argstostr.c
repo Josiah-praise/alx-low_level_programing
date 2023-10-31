@@ -20,6 +20,7 @@ int _strlen(char *s)
  *count - count the number of elements in a 2d array
  *@array: 2darray
  *@rows: the number of rows as an integer
+ *Return: the number of elements in the 2d array as an integer
 */
 int count(char **array, int rows)
 {
