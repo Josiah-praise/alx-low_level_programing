@@ -41,7 +41,7 @@ char *allocate_memory(char *s1, char *s2)
 	}
 	else if (s1 == NULL && s2 == NULL)
 	{
-		return (NULL);
+		ptr = (char *) malloc(sizeof(*ptr));
 	}
 	else
 	{
@@ -67,6 +67,10 @@ char *str_concat(char *s1, char *s2)
 	ptr = allocate_memory(s1, s2);
 	if (ptr == NULL)
 		return (NULL);
+	if (s1 == NULL && s2 == NULL)
+	{
+		ptr[0] = '\0';
+	}
 	if (s1 != NULL && s2 == NULL)
 	{
 		size = _strlen(s1);
