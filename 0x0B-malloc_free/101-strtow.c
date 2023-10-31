@@ -31,27 +31,24 @@ char **startptr(char *str)
 	int i;
 	char **wordptr = (char **) malloc((count_word(str)) * sizeof(char *)), **temp;
 
-	if (wordptr != NULL)
-	{
-		temp = wordptr;
-
-		for (i = 0; *str; i++, str++)
-		{
-			if (i != 0 && *str != ' ' && *(str - 1) == ' ')
-			{
-				*(temp) = str;
-				temp++;
-			}
-			else if (i == 0 && *str != ' ')
-			{
-				*(temp) = str;
-				temp++;
-			}
-		}
-		return (wordptr);
-	}
-	else
+	if (wordptr == NULL)
 		return (NULL);
+	temp = wordptr;
+
+	for (i = 0; *str; i++, str++)
+	{
+		if (i != 0 && *str != ' ' && *(str - 1) == ' ')
+		{
+			*(temp) = str;
+			temp++;
+		}
+		else if (i == 0 && *str != ' ')
+		{
+			*(temp) = str;
+			temp++;
+		}
+	}
+	return (wordptr);
 }
 
 /**
