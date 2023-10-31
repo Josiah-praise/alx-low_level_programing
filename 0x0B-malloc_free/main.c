@@ -4,24 +4,17 @@
 
 
 
-void print_tab(char **tab)
-{
- int i;
- for (i = 0; tab[i] != NULL; ++i)
- {
- printf("%s\n", tab[i]);
- }
-}
-
 int main()
 {
- char **tab;
- tab = strtow("  manzanas ALX School #cisfun barbecue");
- if (tab == NULL)
- {
- printf("Failed\n");
- return (1);
- }
- print_tab(tab);
- return (0);
+ char *s;
+
+    s = str_concat(NULL, NULL);
+    if (s == NULL)
+    {
+        printf("failed\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
+    return (0);
 }
