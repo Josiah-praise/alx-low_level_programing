@@ -124,5 +124,7 @@ char **strtow(char *str)
 		}
 		ptr[i][j] = '\0';
 	}
+	free(start);
+	free(wordlen);
 	return (ptr);
 }
