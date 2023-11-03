@@ -9,19 +9,21 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ptr;
+	char *arrlloc = NULL;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	ptr = (char *) malloc(nmemb * size);
+	/*Allocate memory*/
+	arrlloc = malloc(nmemb * size);
 
-	if (ptr == NULL)
+	if (arrlloc == NULL)
 		return (NULL);
 
-	for (i = 0; i < nmemb; i++)
-		ptr[i] = 0;
+	/*Incialize array with 0*/
+	for (i = 0; i < nmemb * size; i++)
+		arrlloc[i] = 0;
 
-	return (ptr);
+	return (arrlloc);
 }
