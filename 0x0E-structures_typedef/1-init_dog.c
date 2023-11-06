@@ -1,0 +1,15 @@
+#include "dog.h"
+
+/**
+ * init_dog - initialize a variable of type struct dog
+ * @d: a pointer to a struct dog
+ * @name: a pointer to a string
+ * @age: age as a floating point number
+ * @owner: pointer to a string
+ */
+void init_dog(struct dog *d, char *name, float age, char *owner)
+{
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
+}
