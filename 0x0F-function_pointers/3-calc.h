@@ -1,10 +1,6 @@
 #ifndef _CALC
 #define _CALC
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <strings.h>
-
 int op_add(int a, int b);
 
 int op_sub(int a, int b);
