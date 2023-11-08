@@ -2,10 +2,10 @@
 #include <stdlib.h>
 /**
  * get_op_func - selects the correct function to perfrom
- * 			     the operation asked by the user
+ * the operation asked by the user
  * @char: string
  * Return: a pointer to a function with an integer return value and
- * 			two integer arguments
+ * two integer arguments
  */
 int (*get_op_func(char *s))(int, int)
 {
