@@ -27,7 +27,7 @@ int (*get_op_function(char *s))(int, int)
 			return ((ops + i)->f);
 		i++;
 	}
-	printf("Error--\n");
+	printf("Error\n");
 	exit(99);
 	return (NULL);
 }
