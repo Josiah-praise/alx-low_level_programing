@@ -1,30 +1,32 @@
 #include "3-calc.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main - Calculate basic operation between two numbers.
- * @argc: Number of arguments.
- * @argv: Array of arguments.
- * Return: 0 succes.
+ * main - Entry point
+ * @argc: command line argument count
+ * @argv: array of strings
+ * Return: 0 (sucessful) otherwise fail
  */
 int main(int argc, char *argv[])
 {
-	int result, a, b;
+	int a, b, answer;
 	int (*f)(int, int);
 
 	if (argc != 4)
 	{
-		printf("Error\n");
+		printf("Errorpp\n");
 		exit(98);
 	}
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	f = get_op_func(argv[2]);
+	f = get_op_function(argv[2]);
 
-	result = f(a, b);
+	if (f == NULL)
+		return (-1);
 
-	printf("%d\n", result);
+	answer = f(a, b);
+	printf("%d\n", answer);
+
 	return (0);
 }
