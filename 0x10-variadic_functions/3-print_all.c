@@ -38,9 +38,13 @@ void print_all(const char *const format, ...)
 		case 's':
 			str = (va_arg(array, char *));
 			if (str == NULL)
+			{
 				printf("(nil)");
-			else
-				printf("%s", str);
+				print_space(temp);
+				break;
+			}
+			
+			printf("%s", str);
 			print_space(temp);
 			break;
 		case 'i':
