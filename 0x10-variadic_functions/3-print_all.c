@@ -26,7 +26,7 @@ void print_all(const char *const format, ...)
 	va_list array;
 
 	va_start(array, format);
-	while (*temp)
+	while (*temp && temp != NULL)
 	{
 		switch (*temp)
 		{
