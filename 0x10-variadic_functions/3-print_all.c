@@ -23,7 +23,6 @@ void print_all(const char *const format, ...)
 {
 	const char *str;
 	const char *temp = format;
-
 	va_list array;
 
 	va_start(array, format);
@@ -43,7 +42,6 @@ void print_all(const char *const format, ...)
 				print_space(temp);
 				break;
 			}
-			
 			printf("%s", str);
 			print_space(temp);
 			break;
