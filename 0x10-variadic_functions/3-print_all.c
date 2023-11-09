@@ -60,6 +60,6 @@ void print_all(const char *const format, ...)
 		}
 		temp++;
 	}
-
 	va_end(array);
+	printf("\n");
 }
