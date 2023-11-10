@@ -4,7 +4,7 @@
 #include <strings.h>
 
 /**
- * get_op_function - selects correct function to perform the operation
+ * get_op_func - selects correct function to perform the operation
  * @s: character array
  * Return: pointer to a function
  */
