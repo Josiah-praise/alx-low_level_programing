@@ -17,37 +17,23 @@ int print_int(int a)
 }
 
 /**
- * print_list - print the elements of a linked list
- * @h: first node of list
- * @next: the next node
- * @count: the count of nodes
- * Return: the number of nodes
- */
-size_t print_list(const listint_t *h, size_t count, listint_t *next)
-{
-	if (next == NULL)
-	{
-		print_int(h->n);
-		_putchar('\n');
-		return (++count);
-	}
-	print_int(h->n);
-	_putchar('\n');
-	count = print_list(next, count, next->next);
-	return (++count);
-}
-
-/**
  * print_listint - print the integers in a linkes list
  * @h: linked list header
  * Return: the number of nodes
  */
 size_t print_listint(const listint_t *h)
 {
-	listint_t *next = NULL;
+	size_t count = 0;
 
 	if (h == NULL)
 		return (0);
-	next = h->next;
-	return (print_list(h, COUNT, next));
+	/*Iterate through the lsit*/
+	while (h != NULL)
+	{
+		print_int(h->n);
+		_putchar('\n');
+		++count;
+		h = h->next;
+	}
+	return (count);
 }
