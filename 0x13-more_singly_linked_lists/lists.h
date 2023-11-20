@@ -1,6 +1,5 @@
 #ifndef _LIST_
 #define _LIST_
-#define COUNT 0
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -17,6 +16,8 @@ typedef struct listint_s
 } listint_t;
 
 size_t print_listint(const listint_t *h);
+
+void free_listint(listint_t *head);
 
 listint_t *add_nodeint_end(listint_t **head, const int n);
 
