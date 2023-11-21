@@ -1,5 +1,6 @@
 #ifndef _LIST_
 #define _LIST_
+#define FIRST 0
 #include <stdlib.h>
 #include <stdio.h>
 /**
