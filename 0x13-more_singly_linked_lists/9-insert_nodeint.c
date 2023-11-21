@@ -30,10 +30,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/*if you want to insert at index 0*/
 	if (index == FIRST)
 	{
-		/**
-		 *if we're inserting at the first node, we need
-		 * to update the head to point to the new node
-		 */
 		new_node->next = current;
 		*head = new_node;
 		return (current);
