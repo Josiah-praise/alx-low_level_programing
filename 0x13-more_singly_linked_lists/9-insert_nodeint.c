@@ -28,10 +28,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		index++;
 	}
 	/*if you want to insert at index 0*/
-	if (current == NULL && index == idx)
+	if (index == FIRST)
 	{
-		current = new_node;
-		(current)->next = NULL;
+		/**
+		 *if we're inserting at the first node, we need
+		 * to update the head to point to the new node
+		 */
+		new_node->next = current;
+		*head = new_node;
 		return (current);
 	}
 	if (current == NULL)
