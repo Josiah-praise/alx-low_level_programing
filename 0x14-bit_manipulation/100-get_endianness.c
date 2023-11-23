@@ -1,4 +1,8 @@
-int get_endianness()
+/**
+ * get_endianness - check the endianness of a machine
+ * Return: 1 (Little endian) or 0(Big endian)
+ */
+int get_endianness(void)
 {
 	unsigned int num = 1;
 
