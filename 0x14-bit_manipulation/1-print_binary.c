@@ -10,6 +10,9 @@ void print_binary(unsigned long int n)
 	int c = 0;
 	int bits = (sizeof(unsigned long int) * 8) - 1;
 
+	if (n == 0)
+		return (n);
+
 	for (; bits >= 0; a = n)
 	{
 		b = ((a >> bits--) & 1);
