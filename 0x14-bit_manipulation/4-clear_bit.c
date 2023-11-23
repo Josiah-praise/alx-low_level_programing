@@ -17,11 +17,11 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	a = (1 << index) & *n;/* a=0 if not set and a>0 if set*/
 
 	/*if index is set*/
-	if (a != 0)
+	if (a > 0)
 	{
 		a = (1 << index) ^ *n;
 		*n = a;
-		return (0);
+		return (1);
 	}
 	return (-1);
 }
