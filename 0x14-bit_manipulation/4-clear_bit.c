@@ -14,13 +14,12 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 
 	/*check if bit is already set*/
-	a = (1 << index) & *n;/* a=0 if not set and a>0 if set*/
+	a = (1UL << index) & *n;/* a=0 if not set and a>0 if set*/
 
 	/*if index is set*/
-	if (a > 0)
+	if (a != 0)
 	{
-		a = (1 << index) ^ *n;
-		*n = a;
+		*n = *n & ~(1UL << index);
 		return (1);
 	}
 	return (-1);
