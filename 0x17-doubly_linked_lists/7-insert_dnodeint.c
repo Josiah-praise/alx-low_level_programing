@@ -4,6 +4,7 @@
  * @idx: the index
  * @n: the element
  * @h: pointer to head node
+ * Return: the new node
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
