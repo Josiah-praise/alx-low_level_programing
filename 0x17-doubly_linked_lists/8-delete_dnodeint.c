@@ -21,7 +21,7 @@ size_t dlistint_len(const dlistint_t *h)
 
 /**
  * get_dnodeint_at_index - gets node at inex n
- * @head: jead node
+ * @head: head node
  * @index: index of node starting from 0
  * Return: pointer to node
  */
@@ -47,17 +47,17 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
  * delete_dnodeint_at_index - deletes node at given index
  * @head: pointer to head node
  * @index: index of node to be deleted
- * Return: 1 sucess or 0 failure
+ * Return: 1 sucess or -1 failure
 */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
+	dlistint_t *node;
+	size_t len;
+
 	if (head == NULL || *head == NULL)
 		return (-1);
-
-	dlistint_t *node;
-	size_t len = dlistint_len(*head);
-
-	if (len - 1 < index)
+	len = dlistint_len(*head);
+	if (index > len - 1)
 		return (-1);
 	node = get_dnodeint_at_index(*head, index);
 	if (index == 0)
@@ -71,6 +71,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		else
 		{
 			free(node);
+			*head = NULL;
 		}
 	}
 	else if (index == len - 1)
