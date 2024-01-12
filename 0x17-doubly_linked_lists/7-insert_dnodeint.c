@@ -1,38 +1,43 @@
 #include "lists.h"
+
 /**
- * insert_dnodeint_at_index - inserts a node at specific index
- * @idx: the index
- * @n: the element
- * @h: pointer to head node
- * Return: the new node
+ * insert_dnodeint_at_index - Inserts a new node at a given position.
+ * @h: Pointer to head of the list.
+ * @idx: Index to insert.
+ * @n: New data.
+ * Return: The address of the new node.
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	if (h == NULL || *h == NULL)
-		return (NULL);
+	dlistint_t *new = NULL;
+	dlistint_t *prv_posit = *h;
 
-	dlistint_t *node;
-	size_t len = dlistint_len(*h);
-	dlistint_t *new_node = malloc(sizeof(dlistint_t));
+	/*Add at the start position*/
+	if (!idx)
+		return (add_dnodeint(h, n));
 
-	if (len - 1 < idx || new_node == NULL)
-		return (NULL);
-	new_node->n = n;
-	node = get_dnodeint_at_index(*h, idx);
-	if (idx == 0)
+	/*Find prev position*/
+	for (; idx > 1; idx--)
 	{
-		new_node->next = node;
-		new_node->prev = NULL;
-		node->prev = new_node;
-		*h = new_node;
-	}
-	else
-	{
-		new_node->next = node;
-		node->prev->next = new_node;
-		new_node->prev = node->prev;
-		node->prev = new_node;
+		prv_posit = prv_posit->next;
+		if (!prv_posit)
+			return (NULL);
 	}
 
-	return (new_node);
+	/*Add in the last position*/
+	if (!(prv_posit->next))
+		return (add_dnodeint_end(h, n));
+
+	/*Add in middle position*/
+	/*Create new node*/
+	new = malloc(sizeof(dlistint_t));
+	if (!new)
+		return (NULL);
+
+	new->n = n;
+	new->prev = prv_posit;
+	new->next = prv_posit->next;
+	prv_posit->next->prev = new;
+	prv_posit->next = new;
+	return (new);
 }
